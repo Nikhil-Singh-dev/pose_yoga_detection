@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Assistant Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #progress-header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #progress-header h1 {
+            margin: 0;
+        }
+        .progress-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .progress-list li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 10px solid #4CAF50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .progress-list li h3 {
+            margin: 0 0 5px 0;
+        }
+        .progress-list li p {
+            margin: 0;
+        }
+        .progress-list li.complete {
+            border-left-color: #4CAF50;
+        }
+        .progress-list li.in-progress {
+            border-left-color: #FFC107;
+        }
+        .progress-list li.pending {
+            border-left-color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <header id="progress-header">
+        <h1>Yoga Assistant Progress Tracker</h1>
+    </header>
+    <div class="container">
+        <ul class="progress-list">
+            <li class="complete">
+                <h3>Task 1: Initial Research</h3>
+                <p>Status: Completed</p>
+                <p>Description: Conducted initial research on yoga poses and benefits.</p>
+            </li>
+            <li class="in-progress">
+                <h3>Task 2: Backend Development</h3>
+                <p>Status: In Progress</p>
+                <p>Description: Developing backend for handling user queries using OpenAI API.</p>
+            </li>
+            <li class="pending">
+                <h3>Task 3: Frontend Integration</h3>
+                <p>Status: Pending</p>
+                <p>Description: Integrating backend with frontend for user interactions.</p>
+            </li>
+            <li class="pending">
+                <h3>Task 4: Testing and Debugging</h3>
+                <p>Status: Pending</p>
+                <p>Description: Thoroughly testing the application and debugging issues.</p>
+            </li>
+            <li class="pending">
+                <h3>Task 5: Launch</h3>
+                <p>Status: Pending</p>
+                <p>Description: Launching the Yoga Assistant on the website.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

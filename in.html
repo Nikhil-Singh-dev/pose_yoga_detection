@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Yoga Avatar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Avatar styling */
+        #avatar {
+            width: 150px;
+            height: 300px;
+            background-image: url('tadasana.png'); /* Replace with your avatar image */
+            background-size: cover;
+            transition: transform 1s ease, opacity 1s ease;
+            margin-bottom: 20px;
+        }
+
+        /* Pose 1: Tadasana */
+        @keyframes tadasana {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px); /* Slightly up */
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Pose 2: Downward Dog */
+        @keyframes downwardDog {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(50px) rotate(30deg); /* Downward dog effect */
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        /* Pose 3: Warrior */
+        @keyframes warrior {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(50px) rotate(15deg); /* Warrior effect */
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interactive Yoga Avatar</h1>
+    <div id="avatar"></div>
+    <div>
+        <button onclick="performPose('tadasana')">Tadasana</button>
+        <button onclick="performPose('downwardDog')">Downward Dog</button>
+        <button onclick="performPose('warrior')">Warrior</button>
+    </div>
+</div>
+
+<script>
+    let avatar = document.getElementById("avatar");
+
+    function performPose(pose) {
+        // Reset the avatar to default state
+        avatar.style.animation = '';
+
+        // Based on the selected pose, apply the corresponding animation
+        if (pose === 'tadasana') {
+            avatar.style.animation = 'tadasana 10s ease-in-out forwards';
+        } else if (pose === 'downwardDog') {
+            avatar.style.animation = 'downwardDog 10s ease-in-out forwards';
+        } else if (pose === 'warrior') {
+            avatar.style.animation = 'warrior 10s ease-in-out forwards';
+        }
+    }
+</script>
+
+</body>
+</html>
